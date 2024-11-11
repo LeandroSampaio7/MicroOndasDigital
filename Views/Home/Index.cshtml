@@ -1,0 +1,249 @@
+﻿@{
+	ViewData["Title"] = "Micro-ondas Digital";
+}
+
+
+<main class="bg-color-crud">
+	<div class="box-center-crud">
+
+		<div class="exit-modal">
+			<i class="bi bi-x-lg" onclick="closeModalCrud();"></i>
+		</div>
+
+		<div class="mb-3">
+			<label for="nome_programa" class="form-label">Nome do programa</label>
+			<input type="text" class="form-control" id="nome_programa" placeholder="Ex: Macarrão Instantâneo" maxlength="40">
+			<input type="hidden" class="form-control" id="id_programa">
+		</div>
+
+		<div class="mb-3">
+			<label for="nome_alimento" class="form-label">Alimento</label>
+			<input type="text" class="form-control" id="nome_alimento" placeholder="Miojo" maxlength="40">
+		</div>
+
+		<div class="d-flex">
+
+			<div class="mb-3 double-camp">
+				<label for="tempo" class="form-label">Tempo (Minutos)</label>
+				<input type="number" class="form-control" id="tempo" placeholder="1" maxlength="2">
+			</div>
+
+			<div class="mb-3">
+				<label for="tempo" class="form-label">Escolha sua potencia</label>
+				<select class="form-select" id="potencia">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10" selected>10</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="mb-3">
+			<label for="descricao" class="form-label">Instruções</label>
+			<textarea type="email" class="form-control" id="descricao" placeholder="Adicionar 200 ml de agua em uma vazia" maxlength="200"></textarea>
+		</div>
+
+		<button type="button" class="btn btn-primary" onclick="chooseCrud();">Salvar</button>
+
+	</div>
+
+</main>
+
+
+<div class="first-title"><h1>MICRO-ONDAS DIGITAL</h1></div>
+
+<div class="ct-msg">
+	<div class="box-msg">
+		<label id="msg_text_rs">Mensagem Simples</label>
+	</div>
+</div>
+
+<main class="container-main">
+
+	<div class="container-box">
+
+		<div class="ct-food-ready">
+			<div class="list-food-ready">
+
+				<!-- ALIMENTOS PRÉ DEFINIDOS-->
+				<div class="iten-food predefined-food" onclick="choosePreFood('3', '7', 'Observar o barulho de estouros do milho, caso houver um intervalo de mais de 10 segundos entre um estouro e outro, interrompa o aquecimento.')">
+					<div class="view-time-food">
+						<h1 id="time_food_">3</h1>
+						<h2 id="desc_time_">Minutos</h2>
+					</div>
+					<div class="view-data-food">
+						<div id="name_program_"><b>Programa:</b> Pipoca</div>
+						<div id="name_food_"><b>Alimento:</b> Pipoca (de micro-ondas)</div>
+						<div id="power_food_"><b>Potência:</b> 7</div>
+						<div class="desc_food" id="desc_food_">
+							<b>Instruções:</b> Observar o barulho de estouros do milho, caso houver um intervalo de mais de 10 segundos entre um
+							estouro e outro, interrompa o aquecimento.
+						</div>
+					</div>
+				</div>
+				<div class="iten-food predefined-food" onclick="choosePreFood('5', '5', 'Cuidado com aquecimento de líquidos, o choque térmico aliado ao movimento do recipiente pode causar fervura imediata causando risco de queimaduras.')">
+					<div class="view-time-food">
+						<h1 id="time_food_">5</h1>
+						<h2 id="desc_time_">Minutos</h2>
+					</div>
+					<div class="view-data-food">
+						<div id="name_program_"><b>Programa:</b> Leite</div>
+						<div id="name_food_"><b>Alimento:</b> Leite</div>
+						<div id="power_food_"><b>Potência:</b> 5</div>
+						<div class="desc_food" id="desc_food_">
+							<b>Instruções:</b> Cuidado com aquecimento de líquidos, o choque térmico aliado ao movimento do recipiente pode
+							causar fervura imediata causando risco de queimaduras.
+						</div>
+					</div>
+				</div>
+				<div class="iten-food predefined-food" onclick="choosePreFood('14', '4', 'Interrompa o processo na metade e vire o conteúdo com a parte de baixo para cima para o descongelamento uniforme.')">
+					<div class="view-time-food">
+						<h1 id="time_food_">14</h1>
+						<h2 id="desc_time_">Minutos</h2>
+					</div>
+					<div class="view-data-food">
+						<div id="name_program_"><b>Programa:</b> Carne de boi</div>
+						<div id="name_food_"><b>Alimento:</b> Carne em pedaço ou fatias </div>
+						<div id="power_food_"><b>Potência:</b> 4</div>
+						<div class="desc_food" id="desc_food_">
+							<b>Instruções:</b> Interrompa o processo na metade e vire o conteúdo com a parte de baixo para cima para o
+							descongelamento uniforme.
+						</div>
+					</div>
+				</div>
+				<div class="iten-food predefined-food" onclick="choosePreFood('8', '7', 'Interrompa o processo na metade e vire o conteúdo com a parte de baixo para cima para o descongelamento uniforme')">
+					<div class="view-time-food">
+						<h1 id="time_food_">8</h1>
+						<h2 id="desc_time_">Minutos</h2>
+					</div>
+					<div class="view-data-food">
+						<div id="name_program_"><b>Programa:</b> Frango</div>
+						<div id="name_food_"><b>Alimento:</b> Frango (qualquer corte)</div>
+						<div id="power_food_"><b>Potência:</b> 7</div>
+						<div class="desc_food" id="desc_food_">
+							<b>Instruções:</b>  Interrompa o processo na metade e vire o conteúdo com a parte de baixo para cima para o
+							descongelamento uniforme.
+						</div>
+					</div>
+				</div>
+				<div class="iten-food predefined-food" onclick="choosePreFood('8', '7', 'Deixe o recipiente destampado e em casos de plástico, cuidado ao retirar o recipiente pois o mesmopode perder resistência em altas temperaturas.')">
+					<div class="view-time-food">
+						<h1 id="time_food_">8</h1>
+						<h2 id="desc_time_">Minutos</h2>
+					</div>
+					<div class="view-data-food">
+						<div id="name_program_"><b>Programa:</b> Feijão</div>
+						<div id="name_food_"><b>Alimento:</b> Feijão congelado</div>
+						<div id="power_food_"><b>Potência:</b> 9</div>
+						<div class="desc_food" id="desc_food_">
+							<b>Instruções:</b> Deixe o recipiente destampado e em casos de plástico, cuidado ao retirar o recipiente pois o mesmo
+							pode perder resistência em altas temperaturas.
+						</div>
+					</div>
+				</div>
+
+				<!-- ALIMENTOS CUSTOMIZADOS -->
+
+			</div>
+		</div>
+
+		<div class="ct-keyboard-dig">
+
+			<div class="timer-reader">
+				<input id="timerInput" maxlength="5" placeholder="00:00" autocomplete="off" oninput="maskFormatTimer();" />
+			</div>
+
+			<div class="view-desc-food">
+				<div class="box-view-desc-food">
+					Descrição: Cuidado com aquecimento de líquidos, o choque térmico aliado ao movimento do recipiente pode
+					causar fervura imediata causando risco de queimaduras.
+				</div>
+			</div>
+
+			<h1 class="power-title">Potência:</h1>
+			<div class="ct-view-power">
+				<div class="view-power" id="view-power">
+
+					<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option1">1</label>
+
+					<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option2">2</label>
+
+					<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option3">3</label>
+
+					<input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option4">4</label>
+
+					<input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option5">5</label>
+
+					<input type="radio" class="btn-check" name="options" id="option6" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option6">6</label>
+
+					<input type="radio" class="btn-check" name="options" id="option7" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option7">7</label>
+
+					<input type="radio" class="btn-check" name="options" id="option8" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option8">8</label>
+
+					<input type="radio" class="btn-check" name="options" id="option9" autocomplete="off" onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option9">9</label>
+
+					<input type="radio" class="btn-check" name="options" id="option10" autocomplete="off" checked onclick="checkPermission(event)">
+					<label class="btn btn-secondary btn-power" for="option10">10</label>
+
+				</div>
+			</div>
+
+			<div class="ct-keyboard">
+				<div class="keyboard">
+
+					<div class="keyboard-format">
+						<div class="btn-keyboard" onclick="insertValue('1');">1</div>
+						<div class="btn-keyboard" onclick="insertValue('2');">2</div>
+						<div class="btn-keyboard" onclick="insertValue('3');">3</div>
+					</div>
+
+					<div class="keyboard-format">
+						<div class="btn-keyboard" onclick="insertValue('4');">4</div>
+						<div class="btn-keyboard" onclick="insertValue('5');">5</div>
+						<div class="btn-keyboard" onclick="insertValue('6');">6</div>
+					</div>
+
+					<div class="keyboard-format">
+						<div class="btn-keyboard" onclick="insertValue('7');">7</div>
+						<div class="btn-keyboard" onclick="insertValue('8');">8</div>
+						<div class="btn-keyboard" onclick="insertValue('9');">9</div>
+					</div>
+
+					<div class="keyboard-format">
+						<div class="btn-keyboard" onclick="pauseOrStopTimer();"><i class="bi bi-pause-circle-fill"></i></div>
+						<div class="btn-keyboard" onclick="insertValue('0');">0</div>
+						<div class="btn-keyboard" onclick="startTimer();"><i class="bi bi-play-circle-fill"></i></div>
+					</div>
+
+					<div class="keyboard-format">
+						<div class="btn-keyboard-large" onclick="openModalCrud();">Adicionar Programa</div>
+						<div class="btn-keyboard-fast" onclick="fastStart();">Início Rápido <br> (30 seg)</div>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</main>
+

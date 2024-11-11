@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Roboto', 'Montserrat', 'Open Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 05px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #fff0; /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #37355e9b; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 02px; /* Bordas arredondadas do polegar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #37355eee; /* Cor do polegar quando passa o mouse por cima */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', 'Roboto', 'Montserrat', 'Open Sans', sans-serif;
+    background: #fff;
+}
+
+
+
+.first-title h1 {
+    padding: 25px 0px 10px 0px;
+    margin: 0;
+    text-align: center;
+    color: #000055;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-box {
+    height: 500px;
+    width: 800px;
+    background: #443cfb78;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ct-food-ready {
+    height: 500px;
+    width: 500px;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-keyboard-dig {
+    background: #8a85ff90;
+    height: 500px;
+    width: 300px;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.list-food-ready {
+    height: 500px;
+    width: 500px;
+    overflow: auto;
+}
+
+.iten-food {
+    display: flex;
+    padding: 1%;
+    margin: 2%;
+    background: #ff8d3d;
+    color: #fff;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.iten-food:hover {
+    background: #ce702f;
+    color: #fff;
+}
+
+.view-time-food {
+    background: #fff;
+    border-radius: 8px;
+    height: 50px;
+    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    color: #211c1c;
+    align-items: center;
+    text-align: center;
+}
+
+.view-time-food h1{
+    font-size: 1.5em;
+    margin-bottom: .1rem;
+    font-weight: 500;
+}
+
+.view-time-food h2{
+    font-size: 0.65em;
+    margin-bottom: .1rem;
+}
+
+.view-data-food {
+    padding: 0 1% 0 2%;
+    font-size: 0.7em;
+    display: block;
+    min-width: 200px; 
+}
+
+.desc_food{
+    display: none;
+}
+
+.predefined-food {
+    font-style: italic;
+}
+
+.timer-reader {
+    height: 60px;
+    width: auto;
+    max-width: 260px;
+    margin: 4% 5%;
+    background-color: #303148;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.timer-reader input{
+    border: none;
+    text-decoration: none;
+    background-color: #303148;
+    max-width: 250px;
+    height: 50px;
+    color: #fff;
+    font: 500;
+    text-align: right;
+    padding: 0 1% 0 0;
+    font-size: 2.1em;
+}
+
+.view-desc-food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3%;
+}
+
+.box-view-desc-food {
+    font-size: 0.75em;
+    font-weight: 200;
+    font-style: italic;
+    background: #5f5e81c2;
+    color: #fff;
+    border-radius: 05px;
+    text-align: center;
+    max-width: 270px;
+    min-width: 260px;
+    padding: 1% 0;
+}
+
+.view-power {
+    padding: 2% 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ct-view-power {
+    padding: 1%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-power {
+    font-size: 0.8em;
+    background: #201f31ff;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard-format {
+    display: flex;
+}
+
+.ct-keyboard {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-keyboard {
+    background: #fff;
+    border-radius: 05px;
+    color: #201f31ff;
+    height: 40px;
+    width: 90px;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-keyboard-large {
+    background: #fff;
+    border-radius: 05px;
+    color: #201f31ff;
+    height: 50px;
+    width: 130px;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-keyboard-fast {
+    background: #fff;
+    border-radius: 05px;
+    color: #201f31ff;
+    height: 50px;
+    width: 130px;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-keyboard:hover, .btn-keyboard-large:hover, .btn-keyboard-fast:hover {
+    background: #cabefb;
+}
+
+.power-title {
+    padding: 1% 6% 0 6%;
+    margin: 0;
+    font-size: 1.0em;
+}
+
+.ct-msg{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 1% 0 0;
+    z-index: -1;
+}
+
+.box-msg {
+    min-width: 200px;
+    width: 260px;
+    height: 45px;
+    border-radius: 10px;
+    background: #2218fcff;
+    color: #fff;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btns-crud-food{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 2em;
+    width: 250px;
+}
+
+.btns-crud-food i:hover {
+    color: #632100
+}
+
+.double-camp{
+    margin: 0 3% 0 0;
+}
+
+.bg-color-crud {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0000003c;
+    margin-bottom: .1rem;
+}
+
+.form-label {
+    margin-bottom: .0rem;
+}
+
+.box-center-crud {
+    width: 500px;
+    height: 440px;
+    border-radius: 20px;
+    background: #fff;
+    padding: 1% 2%;
+}
+
+.btn-primary{
+    width: 100%;
+    height: 2.5em;
+}
+
+.exit-modal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 1% 0 0;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.exit-modal:hover {
+    color: #353535ca
+}
+
+#descricao{
+    max-height: 80px;
+}
+
